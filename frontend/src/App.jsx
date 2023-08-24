@@ -1,19 +1,26 @@
-import Footer from "./Components/Footer"
-import Header from "./Components/Header"
-import Nabvar from "./Components/Nabvar"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ShowUser from "./blog/ShowUser.jsx";
+import CreateUser from "./blog/CreateUser.jsx";
+import EditarUser from "./blog/EditarUser.jsx";
+
+
 
 function App() {
   return (
-<div>
-<Header/>
 
-<Nabvar/>
+    <>
+      <BrowserRouter>
+        <Routes>
 
-<Footer/>
+          <Route path="/" element={ <ShowUser />} />
+          <Route path="/create" element={ <CreateUser />} />
+          <Route path="/edit/:id" element={ <EditarUser />} />
 
-</div>
+        </Routes>
+      </BrowserRouter>
+    </>
 
-    )
+  )
 }
 
 export default App

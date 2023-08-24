@@ -1,5 +1,5 @@
 import db from "../database/db.js";
-import { DataTypes } from "sequelize";
+import DataTypes  from "sequelize";
 
 const UsuarioModel = db.define('usuarios', {
     id_usuario: {
@@ -11,6 +11,18 @@ const UsuarioModel = db.define('usuarios', {
         type: DataTypes.STRING
     },
     apellido: {
+        type: DataTypes.STRING
+    },
+    usuario:{
+        type: DataTypes.STRING
+    },
+    pass: {
+        type: DataTypes.STRING
+    },
+    tipo_documento:{
+        type: DataTypes.SMALLINT
+    },
+    num_documento:{
         type: DataTypes.STRING
     }
 }, {

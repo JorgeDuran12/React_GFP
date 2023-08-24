@@ -35,35 +35,29 @@ export const createUser = async (req, res) => {
 }
 
 // Actualizar registro
-/*export const updateUser = async (req, res) => {
+export const updateUser = async (req, res) => {
     try {
-        await UsuarioModel.update(
-            {
-                title: req.body.title,
-                content: req.body.content
-            },
-            {
+        await UsuarioModel.update(req.body, {
                 where: { id_usuario: req.params.id }
-            }
-        );
+            })
         res.json({
             message: "Registro actualizado"
         });
     } catch (error) {
         res.json({ message: error.message });
     }
-}*/
+}
 
 // Eliminar registro
-/*export const deleteUser = async (req, res) => {
+export const deleteUser = async (req, res) => {
     try {
         await UsuarioModel.destroy({
             where: { id_usuario: req.params.id }
-        });
+        })
         res.json({
             message: "Registro eliminado"
-        });
+        })
     } catch (error) {
         res.json({ message: error.message });
     }
-}*/
+}
